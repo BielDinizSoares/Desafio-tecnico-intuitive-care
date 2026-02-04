@@ -52,7 +52,7 @@ Por isso usamos `index=False` para exportar apenas as colunas de dados.
 
 ## Teste 3 - Banco de Dados
 
-![Modelagem do Banco de Dados](backend/database.jpeg)
+![Modelagem do Banco de Dados](IntuitiveCare/backend/database.jpeg)
 
 Tabelas criadas:
 - `operadora` - Dados do Relatorio_cadop.csv (1110 registros)
