@@ -40,15 +40,6 @@ No merge entre despesas e operadoras ativas, usei `how='inner'` para garantir qu
 ### Trade-off 2.3 - Ordenação
 Optei por `sort_values` pois o volume de dados não é significativo. Caso fosse maior, seguiria abordagem dos chunks novamente.
 
-### Por que `index=False` no to_csv?
-
-Quando você salva um DataFrame com `df.to_csv()`, por padrão o pandas inclui uma coluna extra com o índice (0, 1, 2, 3...). Isso gera problemas:
-
-1. **Coluna desnecessária** no CSV que não faz parte dos dados
-2. **Erro na importação SQL** - o PostgreSQL espera N colunas, mas recebe N+1
-3. **Poluição visual** - uma coluna "Unnamed: 0" aparece ao ler o CSV de volta
-
-Por isso usamos `index=False` para exportar apenas as colunas de dados.
 
 ## Teste 3 - Banco de Dados
 
